@@ -1,19 +1,43 @@
 /**
  * App
  */
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
+import java.util.Locale;
 
 public class App {
 
     public static void main(String[] args) {
-        Tabela salario = new Tabela();
+    
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
 
-        List<String>lista = new ArrayList<>();
+    System.out.println("digite quantidade");
 
-        lista.add("Gimba");
-        lista.add("Constantine");
+    int n = sc.nextInt();
 
-        System.out.println(salario);
+    Tabela[] vetor = new Tabela[n];
+
+    
+
+    for (int i =0;i < vetor.length;i++){
+        System.out.println("digite salario");
+        double salario = sc.nextDouble();
+
+        System.out.println("digite id");
+        int id =sc.nextInt();
+
+        System.out.println("digite nome");
+        String nome = sc.next();
+
+        vetor[i]= new Tabela(salario, nome);
+
+        System.out.println(id);
+
     }
+
+    sc.close();
+
+
+    }
+
 }

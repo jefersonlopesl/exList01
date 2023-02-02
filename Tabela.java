@@ -1,11 +1,14 @@
+
 public class Tabela {
-    private double salario=0.0;
 
+    private double salario;
+    private String nome;
 
-    public void salario(){
-        
+    public Tabela (double salario,String nome ) {
+        this.salario = salario;
+        this.nome = nome;
+
     }
-
 
     public double getSalario(){
         return salario;
@@ -13,7 +16,21 @@ public class Tabela {
 
     public void setSalario(double salario){
         this.salario = salario;
+
+        
     }
 
 
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setnome(String nome){
+        this.nome = nome;
+
+        
+    }
+
+    
 }
